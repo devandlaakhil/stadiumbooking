@@ -1,0 +1,88 @@
+<div class="container-fluid" style="background: #ebe9e9;">
+  <div class="row">
+    <!-- Booking Form -->
+    <div class="col-lg-10">
+      <div class="booking-container">
+        <h4>Sports Ground Booking</h4>
+        <hr>
+        <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+          <div class="user-details">
+            <div class="form-row d-flex">
+              <div class="form-group col-md-5 custom-margin">
+                <label for="date">Select Date </label>
+                <input type="date" id="date" class="form-control" formControlName="date" required>
+              </div>
+              <div class="form-group col-md-5 custom-margin">
+                <label for="ground">Select Ground </label>
+                <select id="ground" class="form-control" formControlName="ground" required>
+                  <option value="Ground 1">Ground 1</option>
+                  <option value="Ground 2">Ground 2</option>
+                  <option value="Ground 3">Ground 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row d-flex">
+              <div class="form-group col-md-5 custom-margin">
+                <label for="hours">Select Hours </label>
+                <select id="hours" class="form-control" formControlName="hours" required>
+                  <option *ngFor="let hour of hours" [value]="hour">{{ hour }} hour(s)</option>
+                </select>
+              </div>
+              <div class="form-group col-md-5 custom-margin">
+                <label for="rate">Cost For Hour </label>
+                <input type="text" id="rate" class="form-control" formControlName="rate" readonly>
+              </div>
+            </div>
+            <div class="form-row d-flex">
+              <div class="form-group col-md-5 custom-margin">
+                <label for="totalrate">Total Cost </label>
+                <input type="text" id="totalrate" class="form-control" formControlName="totalrate" readonly>
+              </div>
+              <div class="form-group col-md-5 custom-margin">
+                <label for="name">Team Name </label>
+                <input type="text" id="name" class="form-control" formControlName="name"  required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <!-- <label>Select Time Slot </label> -->
+             <h4>Select Time Slot</h4>
+            <hr>
+            <div class="time-slots-container">
+              <div *ngFor="let slot of timeSlots" class="time-slot" [class.selected]="slot === selectedSlot">
+                <span>{{ slot }}</span>
+                <button type="button" class="btn btn-success" (click)="selectSlot(slot)" [disabled]="bookedSlots.includes(slot)"
+                [class.disabled-button]="bookedSlots.includes(slot)">Book</button>
+              </div>
+            </div>         
+          </div>
+          <button type="submit" class="btn btn-success custom-button"
+            [disabled]="!bookingForm.valid || !selectedSlot">Submit Booking</button>
+        </form>
+
+        <app-confirmation-modal [showModal]="showModal" [bookingSummary]="bookingSummary" (onClose)="closeModal()"
+          (onConfirm)="makePayment()">
+        </app-confirmation-modal>
+      </div>
+    </div>
+
+
+
+    <!-- Carousel for Advertising Banners -->
+    <div class="col-lg-2">
+      <div id="advertisingCarousel" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../../../assets/cric2.avif" alt="First slide">
+          </div>
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../../../assets/bowling.jfif" alt="Second slide">
+          </div>
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../../../assets/swim.avif" alt="Third slide">
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>

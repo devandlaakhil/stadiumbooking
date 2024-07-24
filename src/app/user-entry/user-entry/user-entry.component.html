@@ -1,0 +1,48 @@
+<div class="container-fluid min-vh-100" style="background-image: url('../../../assets/Loginbg.png'); background-size: cover;">
+    <div class="row justify-content-end align-items-center min-vh-100">
+        <div class="col-md-4">
+            <div class="card px-3 pt-2 pb-3">
+                <h2 class="logacc">Register & Login Here</h2>
+                
+                <ul class="nav nav-tabs fonts">
+                    <li class="nav-item">
+                        <a class="nav-link" [class.active]="activeTab === 'user'" (click)="selectTab('user')">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [class.active]="activeTab === 'admin'" (click)="selectTab('admin')">Admin</a>
+                    </li>
+                </ul>
+                
+                <div class="tab-content mt-3">
+                    <div *ngIf="activeTab === 'user'">
+                        <form action="" class="main" (ngSubmit)="onUserSubmit()">
+                            <div class="col-12 mt-2">
+                                <label for="validationCustom01" class="validationCustom01">Enter Mobile/Email</label>
+                                <input type="text" class="form-control emailrphone" id="validationCustom01" placeholder="Email/Mobile" name="emailrphone" [(ngModel)]="emailrphone" required>
+                            </div>
+                            <div class="mt-3 otpButton">
+                                <button class="btn btn-warning" type="submit">Send OTP</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div *ngIf="activeTab === 'admin'">
+                        <form action="" class="main" (ngSubmit)="onAdminSubmit()">
+                            <div class="col-12 mt-2">
+                                <label for="adminEmail" class="adminEmail" style="color: white;">Enter Username</label>
+                                <input type="text" class="form-control" id="adminEmail" placeholder="Username" name="username" [(ngModel)]="adminUsername" required>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <label for="adminPassword" class="adminPassword" style="color: white;">Enter Password</label>
+                                <input type="password" class="form-control" id="adminPassword" placeholder="Password" name="password" [(ngModel)]="adminPassword" required>
+                            </div>
+                            <div class="mt-3 otpButton">
+                                <button class="btn btn-warning" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

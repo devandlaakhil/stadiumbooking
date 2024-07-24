@@ -1,0 +1,17 @@
+<form class="otp-form" name="otp-form" (ngSubmit)="onSubmit()">
+    <div class="title">
+        <p class="msg">Please enter OTP to verify</p>
+    </div>
+    <div class="otp-input-fields">
+        <input type="number" class="otp__digit otp__field__1" #otp1Input (input)="onOtpInput(otp1Input, 1)">
+        <input type="number" class="otp__digit otp__field__2" #otp2Input (input)="onOtpInput(otp2Input, 2)">
+        <input type="number" class="otp__digit otp__field__3" #otp3Input (input)="onOtpInput(otp3Input, 3)">
+        <input type="number" class="otp__digit otp__field__4" #otp4Input (input)="onOtpInput(otp4Input, 4)">
+        <input type="number" class="otp__digit otp__field__5" #otp5Input (input)="onOtpInput(otp5Input, 5)">
+        <input type="number" class="otp__digit otp__field__6" #otp6Input (input)="onOtpInput(otp6Input, 6)">
+    </div>
+    <div class="otpButton">
+        <button type="submit" class="btn btn-warning space">verify</button>
+        <button type="close" (click)="close()" class="btn btn-light">close</button>
+    </div>
+</form>

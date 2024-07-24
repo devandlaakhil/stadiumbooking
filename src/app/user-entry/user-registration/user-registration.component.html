@@ -1,0 +1,139 @@
+<div class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="../../../assets/adlogo.png" height="20px" width="35px" alt="" />
+      <h3>Welcome</h3>
+      <h5>Hi {{name}}</h5>
+      <p>You are 30 seconds away from Registering!</p>
+      <!-- <input type="submit" name="" value="Login" /><br /> -->
+    </div>
+    <div class="col-md-9 register-right">
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeTab === 'user'" (click)="selectTab('user')">User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeTab === 'admin'" (click)="selectTab('admin')">Admin</a>
+        </li>
+      </ul>
+      
+        <div class="tab-pane fade show" *ngIf="activeTab === 'user'">
+          <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <h3 class="register-heading">Register Here</h3>
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="name" placeholder="Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="fullname" placeholder="Full Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="address" placeholder="Address" required />
+                </div>
+                <div class="form-group">
+                  <input type="date" class="form-control" formControlName="dob" placeholder="Date of Birth" required />
+                </div>
+                <div class="form-group">
+                  <div class="maxl">
+                    <label class="radio inline">
+                      <input type="radio" formControlName="gender" value="Male" required>
+                      <span> Male </span>
+                    </label>
+                    <label class="radio inline">
+                      <input type="radio" formControlName="gender" value="Female" required>
+                      <span> Female </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="email" class="form-control" formControlName="email" placeholder="Email" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" minlength="10" maxlength="10" class="form-control" formControlName="mobile" placeholder="Mobile" style="background-color: #e9ecef;" readonly />
+                </div>
+                <div class="form-group">
+                  <input type="text" name="role" value="user" hidden />
+                </div>
+                <div class="form-group">
+                  <select class="form-control" formControlName="state" required>
+                    <option selected>Please select your state</option>
+                    <option>AP</option>
+                    <option>TS</option>
+                    <option>TN</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Future reference *" name="securityAnswer" disabled />
+                </div>
+              </div>
+            </div>
+            <input type="submit" class="btnRegister" />
+          </form>
+        </div>
+        <div class="tab-pane fade show" *ngIf="activeTab === 'admin'">
+          <form [formGroup]="adminRegistrationForm" (ngSubmit)="onAdminSubmit()">
+            <h3 class="register-heading">Register Here</h3>
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="name" placeholder="Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="fullname" placeholder="Full Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="address" placeholder="Address" required />
+                </div>
+                <div class="form-group">
+                  <input type="date" class="form-control" formControlName="dob" placeholder="Date of Birth" required />
+                </div>
+                <div class="form-group">
+                  <div class="maxl">
+                    <label class="radio inline">
+                      <input type="radio" formControlName="gender" value="Male" required>
+                      <span> Male </span>
+                    </label>
+                    <label class="radio inline">
+                      <input type="radio" formControlName="gender" value="Female" required>
+                      <span> Female </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="email" class="form-control" formControlName="email" placeholder="Email" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" minlength="10" maxlength="10" class="form-control" formControlName="mobile" placeholder="Mobile" style="background-color: #e9ecef;" readonly />
+                </div>
+                <div class="form-group">
+                  <input type="text" name="role" value="admin" hidden />
+                </div>
+                <div class="form-group">
+                  <select class="form-control" formControlName="state" required>
+                    <option selected>Please select your state</option>
+                    <option>AP</option>
+                    <option>TS</option>
+                    <option>TN</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" formControlName="password" placeholder="Password" required />
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password" required />
+                </div>
+              </div>
+            </div>
+            <input type="submit" class="btnRegister" />
+          </form>
+        </div>
+      
+    </div>
+    
+  </div>
+</div>

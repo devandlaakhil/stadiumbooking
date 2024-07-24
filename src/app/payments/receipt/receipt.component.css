@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.receipt {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    position: relative;
+    margin: 20px 0;
+    border: 2px dashed #ddd;
+    overflow: hidden;
+}
+
+.receipt::before, .receipt::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 10px;
+    background: #fff;
+}
+
+.receipt::before {
+    left: -10px;
+    border-radius: 10px 10px 0 0;
+    border-left: 2px dashed #ddd;
+    border-right: 2px dashed #ddd;
+}
+
+.receipt::after {
+    left: -10px;
+    border-radius: 0 0 10px 10px;
+    border-left: 2px dashed #ddd;
+    border-right: 2px dashed #ddd;
+    top: auto;
+    bottom: -10px;
+}
+
+.qr-code {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.qr-code img {
+    width: 100px;
+    height: 100px;
+}
+
+.receipt h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.order-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.order-info div {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.order-info span {
+    display: block;
+    color: #666;
+}
+
+.order-info span:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.order-items {
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.item-details {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.item-pack, .item-qty {
+    color: #666;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.order-summary {
+    border-top: 2px dashed #ddd;
+    padding-top: 5px;
+    background-color: #f1f1f1;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.summary-item, .summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-total {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+.bckToHome{
+    cursor: pointer;
+}

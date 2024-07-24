@@ -1,0 +1,128 @@
+
+    <div class="container">
+        <form class="registration-form">
+            <h3>Personal Details</h3>
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="first-name">First Name*</label>
+                    <input type="text" id="first-name" placeholder="Hrithik Rana">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name*</label>
+                    <input type="text" id="last-name" placeholder="Enter your Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender*</label>
+                    <select id="gender">
+                        <option>Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth*</label>
+                    <input type="date" id="dob">
+                    <span class="error">Please enter date of birth</span>
+                </div>
+                <div class="form-group">
+                    <label for="parent-name">Mother/Father's First Name*</label>
+                    <input type="text" id="parent-name" placeholder="Enter First Name">
+                </div>
+                <div class="form-group">
+                    <label for="parent-last-name">Last Name</label>
+                    <input type="text" id="parent-last-name" placeholder="Enter Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" placeholder="Enter your Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="pin-code">Pin Code*</label>
+                    <input type="text" id="pin-code" placeholder="Enter your area's Pin Code">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country*</label>
+                    <select id="country">
+                        <option>Select</option>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time-zone">Time Zone*</label>
+                    <select id="time-zone">
+                        <option>IST - Indian Standard Time - GMT +5:30</option>
+                        <option>GMT - Greenwich Mean Time</option>
+                        <option>EST - Eastern Standard Time</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number (include country code)*</label>
+                    <input type="tel" id="phone" placeholder="+919876543210">
+                </div>
+            </div>
+            <h3>Other Details</h3>
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="membership">Membership Type*</label>
+                    <select id="membership">
+                        <option selected>Select</option>
+                        <option>Basic</option>
+                        <option>Premium</option>
+                        <option>Gold</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Membership Duration*</label>
+                    <select id="duration">
+                        <option selected>Select</option>
+                        <option>Monthly</option>
+                        <option>Quaterly</option>
+                        <option>Halferly</option>
+                        <option>Annualy</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="timings">Preferred Start Time*</label>
+                    <input type="time" id="timings" placeholder="Enter your preferred timings">
+                </div>
+                <div class="form-group">
+                    <label for="sport">Preferred Sport*</label>
+                    <select id="sport">
+                        <option selected>Select</option>
+                        <option>Cricket</option>
+                        <option>Table Tennessee</option>
+                        <option>Swimming</option>
+                        <option>football</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coach">Preferred Coach*</label>
+                    <select id="coach">
+                        <option selected>Select</option>
+                        <option>Ashish</option>
+                        <option>Rakesh</option>
+                        <option>Samarpan</option>
+                        <option>Nazeer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="startdate">Start Date</label>
+                    <input type="date" id="startdate" name="startdate" [(ngModel)]="currentDate" >
+                </div>
+                <div class="form-group">
+                    <label for="enddate">End Date <small>(Auto fill)</small></label>
+                    <input type="date" id="enddate" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="cost">Total Cost</label>
+                    <input type="text" id="cost" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" (click)="payment()">Payment</button>
+            </div>
+        </form>
+    </div>

@@ -1,0 +1,118 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* body {
+    display: flex;
+} */
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.sidebar-header h2 {
+    color: #333;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar-nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li a.active {
+    background-color: #e0e0e0;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.user-info span {
+    display: block;
+}
+
+.dashboard .statistics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.dashboard .statistics .stat-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    width: 23%;
+}
+
+.dashboard .charts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.dashboard .charts .chart {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 4px;
+    width: 32%;
+}
+
+.dashboard .tasks-and-schedule {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard .tasks-and-schedule .tasks,
+.dashboard .tasks-and-schedule .schedule {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 4px;
+    width: 49%;
+}

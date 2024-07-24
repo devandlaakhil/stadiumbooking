@@ -1,0 +1,129 @@
+h4{
+  margin-top: 5px;
+  font-family: cursive !important;
+}
+.booking-container {
+  /* background: linear-gradient(to right, #0000009c, #ffff00b5); */
+  padding: 5px;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.form-group input, .form-group select {
+  background-color: rgb(252, 250, 250) !important;
+  -webkit-box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.07)
+}
+
+.user-details{
+  border: #ccc solid 1px;
+  border-radius: 5px;
+  padding: 5px;
+  padding: 5px;
+  /* -webkit-box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.07) */
+}
+
+.time-slots-container {
+  font-family: cursive !important;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  gap: 10px; /* Space between slots */
+}
+.custom-button{
+  margin-top: 5px;
+}
+
+.time-slot {
+  flex: 1 1 calc(25% - 10px); /* 4 slots per row, adjust 10px based on gap */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 2px 0; /* Adjusted for spacing */
+  -webkit-box-shadow: 10px 10px 0px -3px rgba(0,0,0,0.07);
+}
+
+.selected {
+  background: linear-gradient(to right, black, yellow);
+  color: white;
+}
+
+.carousel {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+/* booking.component.css or global styles.css */
+.form-row {
+  margin-bottom: 15px;
+}
+
+.custom-margin {
+  margin-right: 10px;
+}
+
+.disabled-button {
+  background-color: #535353; 
+}
+
+
+/* .carousel */
+/* Make the carousel items stack vertically */
+#advertisingCarousel .carousel-inner {
+  height: 600px; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Position each carousel item absolutely */
+#advertisingCarousel .carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+#advertisingCarousel .carousel-item.active {
+  top: 0;
+}
+
+#advertisingCarousel .carousel-item:nth-child(1) {
+  animation: slideUp 30s infinite;
+}
+#advertisingCarousel .carousel-item:nth-child(2) {
+  animation: slideUp 30s infinite 10s;
+}
+#advertisingCarousel .carousel-item:nth-child(3) {
+  animation: slideUp 30s infinite 20s;
+}
+
+@keyframes slideUp {
+  0% {
+    top: 100%;
+  }
+  10%,
+  30% {
+    top: 0;
+  }
+  40%,
+  100% {
+    top: -100%;
+  }
+}
+
+
+
+
+
+

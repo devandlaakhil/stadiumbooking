@@ -1,0 +1,109 @@
+/* Add your CSS styles here */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background:  #ebe9e9;;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.checkout, .billing-details {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+small{
+    font-size: .875em;
+    margin-left: 25px;
+}
+.logo{
+    margin-left: 380px;
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group label, .payment-method label{
+    font-weight: lighter;
+}
+
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.apply-coupon {
+    background-color: #28a745;
+}
+
+button.complete-checkout {
+    background-color: #c3beeb;
+}
+
+input[type="radio"]:checked ~ .paypal {
+    background-color: rgb(133, 182, 199); /* Set the background color for the entire div when the radio button is checked */
+}
+
+.digits{
+    font-size: small;
+    font-weight: lighter;
+}
+
+.coupon-container {
+    display: flex; /* Aligns children in a row */
+    border: 1px solid #ccc; /* Box border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px; /* Padding inside the box */
+    background-color: #f9f9f9; /* Background color */
+  }
+  
+  .coupon-container input {
+    flex: 1; /* Takes up the remaining space */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners for the input */
+    margin-right: 5px; /* Space between input and button */
+  }
+  
+  .coupon-container button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .coupon-container button:hover {
+    background-color: #0056b3; /* Button background color on hover */
+  }
+  .code{
+    margin-left: 0%;
+    margin-bottom: 5px;
+  }
+  

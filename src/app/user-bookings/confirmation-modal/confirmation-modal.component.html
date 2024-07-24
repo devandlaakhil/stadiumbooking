@@ -1,0 +1,40 @@
+<div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show d-block': showModal}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header custom-modal">
+          <h5 class="modal-title">Booking Summary</h5>
+          <!-- <button type="button" class="close" (click)="close()">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+          <div class="summary-item">
+            <p><strong>Team Name:</strong> <span>{{ bookingSummary?.name }}</span></p>
+          </div>
+          <div class="summary-item">
+            <p><strong>Date:</strong> <span>{{ bookingSummary?.date }}</span></p>
+          </div>
+          <div class="summary-item">
+            <p><strong>Ground:</strong> <span>{{ bookingSummary?.ground }}</span></p>
+          </div>
+          <div class="summary-item">
+            <p><strong>Time Slot:</strong> <span>{{ bookingSummary?.timeSlot }}</span></p>
+          </div>
+          <div class="summary-item">
+            <p><strong>Hours:</strong> <span>{{ bookingSummary?.hours }}</span></p>
+          </div>
+          <div class="summary-item">
+            <p><strong>Total Amount:</strong> <span>{{ bookingSummary?.amount }}</span></p>
+          </div>
+          <div class="summary-item">
+            <p><strong>Payment Status:</strong> <span>{{ bookingSummary?.paymentStatus }}</span></p>
+          </div>
+        </div>        
+        <div class="modal-footer custom-modal">
+          <button type="button" class="btn btn-secondary" (click)="close()">Cancel</button>
+          <button type="button" class="btn btn-primary" (click)="confirm()">Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

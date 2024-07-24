@@ -1,0 +1,353 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)"><img src="../../../assets/logo.png" width="35px" height="35px"  alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li  *ngIf="isAdmin" class="nav-item">
+            <a class="nav-link" href="javascript:void(0)" (click)="dashboard()">DashBoard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)" (click)="profile()">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)" (click)="membership()">Memberships</a>
+          </li>
+          <li class="nav-item" *ngIf="isMember">
+            <a class="nav-link" href="javascript:void(0)" (click)="membership()">Active Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Coachings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Contact us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search by court">
+          <input class="form-control me-2" type="text" placeholder="Search by place">
+          <button class="btn btn-primary" type="button">Search</button>
+        </form>
+      </div>
+    </div>
+    <img src="../../../assets/supervisor.png" alt="Logo" style="width:40px;" class="rounded-pill">
+  </nav>
+  
+  <div class="container-fluid mt-3">
+    <div class="card-deck card-deck-custom">
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/cricket2.jfif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Cricket 
+                <span class="available">
+                  <img src="../../../assets/notavail.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bookbuttons">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()" disabled>Book Now</button>
+          <button class="btn btn-primary" (click)="membership()" disabled>Membership</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/swiming.jfif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Swimming 
+                <span class="available">
+                  <img src="../../../assets/availableicon.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bookbuttons">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()">Book Now</button>
+          <button class="btn btn-primary" (click)="membership()">Membership</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/batmenton.jfif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Batmenton 
+                <span class="available">
+                  <img src="../../../assets/availableicon.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bookbuttons">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()">Book Now</button>
+          <button class="btn btn-primary" (click)="membership()">Membership</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/tablett.jfif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Table Tennessee 
+                <span class="available">
+                  <img src="../../../assets/notavail.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bookbuttons">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()" disabled>Book Now</button>
+          <button class="btn btn-primary" (click)="membership()" disabled>Membership</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/hockey.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Hockey 
+                <span class="available">
+                  <img src="../../../assets/availableicon.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div> 
+        <div class="card-footer bookbuttons">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()">Book Now</button>
+          <button class="btn btn-primary" (click)="membership()">Membership</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/shut.jfif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Shuttle
+                <span class="available">
+                  <img src="../../../assets/availableicon.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bookbuttons">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()">Book Now</button>
+          <button class="btn btn-primary" (click)="membership()">Membership</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/sketing.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Sketting 
+                <span class="available">
+                  <img src="../../../assets/notavail.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bookbuttons">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()" disabled>Book Now</button>
+          <button class="btn btn-primary" (click)="membership()" disabled>Membership</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/bowling.jfif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Bowling 
+                <span class="available">
+                  <img src="../../../assets/availableicon.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bookbuttons">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()">Book Now</button>
+          <button class="btn btn-primary" (click)="membership()">Membership</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/archiey.jfif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Archiry 
+                <span class="available">
+                  <img src="../../../assets/availableicon.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bookbuttons">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()">Book Now</button>
+          <button class="btn btn-primary" (click)="membership()">Membership</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/cricket2.jfif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Sports Arena 
+                <span class="available">
+                  <img src="../../../assets/availableicon.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()">Book Now</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/cricket2.jfif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Sports Arena 
+                <span class="available">
+                  <img src="../../../assets/availableicon.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()">Book Now</button>
+        </div>
+      </div>
+      <div class="card card-custom">
+        <img class="card-img-top" src="../../../assets/cricket2.jfif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                Sports Arena 
+                <span class="available">
+                  <img src="../../../assets/availableicon.png" height="35px" width="35px" alt="Available icon">
+                </span>
+              </h5>
+          <div class="card-text">
+            <div class="inline-content">
+                <img src="../../../assets/timeicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Morning 10AM to Evening 11PM</span>
+            </div>
+            <div class="inline-content">
+                <img src="../../../assets/addressicon.png" height="15px" width="15px" alt="Time icon"> 
+                <span>Hi-tech city, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <button class="btn btn-success" (click)="gameBooking()">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>

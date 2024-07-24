@@ -1,0 +1,41 @@
+p{
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+}
+.modal {
+    display: none;
+  }
+
+.custom-modal{
+  background: linear-gradient(to right,#ffff00b5, #0000009c);
+  color: rgb(0, 0, 0) !important; /* Custom header text color */
+}
+  
+  .modal.show {
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .d-block {
+    display: block;
+  }
+
+  .modal-body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5em;
+  }
+  
+  .summary-item {
+    display: contents;
+  }
+  
+  .summary-item strong {
+    text-align: left;
+  }
+  
+  .summary-item span {
+    text-align: left;
+  }
+  
+  

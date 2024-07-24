@@ -1,0 +1,52 @@
+.card-custom {
+    width: 100%;
+    height: 300px; /* Adjust this value to decrease the card height */
+    display: flex;
+    flex-direction: column;
+  }
+  .card-img-top {
+    flex-shrink: 0;
+    height: 130px; /* Adjust this value to decrease the image height */
+    object-fit: cover;
+  }
+  .card-body {
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+  .bookbuttons{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .available {
+    margin-left: auto;
+  }
+  .card-text {
+    height: 60px; /* Fixed height for the text */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  .card-footer {
+    flex-shrink: 0;
+  }
+  .card-deck-custom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .inline-content {
+    display: flex;
+    align-items: center;
+  }
+  .inline-content img {
+    margin-right: 5px; /* Adjust margin as needed */
+  }
+  .inline-content span {
+    display: inline-block;
+  }
+
+
+
